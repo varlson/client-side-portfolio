@@ -1,0 +1,44 @@
+const { setModal } = useContext(Utilities);
+  const openHandle = (option) => {
+    if (option == 1) {
+      setOpen((e) => ({ ...e, ["prime"]: true }));
+    } else {
+      setOpen((e) => ({ ...e, ["second"]: true }));
+    }
+  };
+
+  const closeHandler = (option) => {
+    if (option == 1) {
+      setOpen((e) => ({ ...e, ["prime"]: false }));
+    } else {
+      setOpen((e) => ({ ...e, ["second"]: false }));
+    }
+  };
+
+  const collapase = (name, value) => {
+    Setshow((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const collapseHandler = async (option = 1) => {
+    if (option == 1) {
+      const prime = document.getElementById("prime");
+      if (!show.prime) {
+        prime.style.maxHeight = prime.scrollHeight + "px";
+        setOpen("prime", true);
+      } else {
+        prime.style.maxHeight = null;
+        collapase("prime", false);
+      }
+    } else {
+      const second = document.getElementById("second");
+      if (!show.second) {
+        second.style.maxHeight = second.scrollHeight + "px";
+        collapase("second", true);
+      } else {
+        second.style.maxHeight = null;
+        collapase("second", false);
+      }
+    }
+  };
