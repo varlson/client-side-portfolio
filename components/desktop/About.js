@@ -69,7 +69,7 @@ function About() {
   }, []);
 
   return (
-    <div className="px-2 bg-slate-400 h-screen">
+    <div className="px-2 bg-slate-400 h-screen overflow-hidden">
       <div className="grid">
         <p className="justify-self-end md:justify-self-start text-right text-xl px-2 pt-2 font-Jura border-b  border-white text-white">
           Sobre
